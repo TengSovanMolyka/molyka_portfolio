@@ -1238,6 +1238,51 @@ img {
   overscroll-behavior-x: contain;
 }
 
+.gallery-media iframe {
+    border: none;
+}
+
+iframe.gallery-media {
+    border: none;
+    display: block;
+}
+
+/* Gallery media */
+.gallery-media {
+    width: 100%;
+    height: 100%;
+    flex: 0 0 100%;
+    object-fit: contain;
+    scroll-snap-align: center;
+}
+
+/* YouTube video */
+iframe.gallery-media {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: none;
+    object-fit: contain;
+    background: #000;
+}
+
+/* Local video */
+video.gallery-media {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    background: #000;
+}
+
+/* Responsive video */
+@media (max-width: 768px) {
+    iframe.gallery-media {
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        height: auto;
+    }
+}
+
 /* Images and videos share identical dimensions */
 #modalFiles .gallery-media {
   flex: 0 0 100%;
